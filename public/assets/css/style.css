@@ -494,15 +494,16 @@ body{
 		background-image: url("../../uploads/logo/tit-repeat-bottom.jpg");
 	}
 	.line-home {
-     border-bottom: 1px solid #055699;
-     width: 100%;
+		border-bottom: 1px solid #055699;
+		width: 100%;
+		margin: 0px;
 	}
 	.group-news-new-left{
 		width: 100%;
 		max-height: 160px;
 		padding: 5px 5px;
-		 text-overflow: ellipsis;
-		 overflow: hidden;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.group-news-new-left img{
 		width: 82px;
@@ -515,17 +516,428 @@ body{
 		
 	}
 	.group-news-new-left-title a{
-		    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: justify;
-    
-		 
+		color: #000;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: justify;
+
+
 	}
 	.group-news-new-left-intro{
 		
-    text-align: justify;
-    margin-top: 5px;
-    padding-bottom: 5px;
+		text-align: justify;
+		margin-top: 5px;
+		padding-bottom:0px;
+	}
+	.group-news-new{
+		border:1px solid #9e9e9e;
+		border-top:none;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px; 
+	}
+	.list-news-blue{
+		background-color: #cfe5f2;
+		width: 96%;
+		margin: 0 auto;
+		margin-bottom: 5px;
+
+	}
+	.list-news-blue ul{
+		color: #055699;
+		list-style-type: square;
+		margin: 10px 20px;
+	}
+	.list-news-blue ul li{
+		
+
+	}
+	.list-news-blue ul li a{
+		color: #333;
+		line-height: 20px;
+		overflow: hidden;
+		padding-bottom: 5px;
+		text-decoration: none;
+		vertical-align: middle;
+		text-overflow: ellipsis;
+	}
+	.common{
+		padding-top: 10px;
+	}
+	.box-header{
+		background: none repeat scroll 0 0 #055699;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		width: 100%;
+		height: 25px;
+	}
+	.box-header p{
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		line-height: 25px;
+		font-weight: bold;
+	}
+	.bor-box{
+		width: 100%;
+		border: solid 1px #999;
+		border-left: 1px solid #999;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 4px;
+	}
+	.tag-list-left ul{
+		margin-top: 5px;
+		list-style-type: square;
+		color: #055699;
+	}
+	.tag-list-right ul{
+		list-style-type: square;
+		color: #055699;
+		margin-top: 5px;
+	}
+	.tag-list-left ul li{
+		width: 80%;
+		margin:0 auto;
+	}
+	.tag-list-right ul li{
+		width: 80%;
+		margin:0 auto;
+	}
+	.tag-list-left ul li a{
+		color: #000;
+		padding-left: 10px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.tag-list-right ul li a{
+		color: #000;
+		padding-left: 10px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.header-box-right{
+		background: none repeat scroll 0 0 #055699;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		width: 98%;
+		height: 25px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.header-box-right p{
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		line-height: 25px;
+		font-weight: bold;
+	}
+	.new-last-week{
+		width: 98%;
+		margin:0 auto;
+		border: solid 1px #999;
+		border-left: 1px solid #999;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 4px;
+	}
+	.new-last-week ul {
+		margin-top: 5px;
+		list-style-type: square;
+		color: #055699;
+	}
+	.new-last-week ul li{
+		width: 83%;
+		margin: 0 20px;
+		
+	}
+	.new-last-week ul li a{
+		color: #000;
+		padding-left: 10px;
+		font-weight: normal;
+		text-decoration: none;
+		
+	}
+	.new-last-week ul li a:hover{
+		color:#055699;
+	}
+	.pictures-pt{
+		margin-top: 5px;
+	}
+	.pictures-pt img{
+		width: 99%;
+		margin: auto;
+		margin-bottom: 5px;
+	}
+	.pictures-pt a{
+		color: #055699 !important;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+	}
+	.tuvan-nt{
+		display: flex;
+		margin-top: 5px;
+	}
+	.fb-fanpage{
+		margin-top: 10px;
+	}
+	.ads-right img{
+		width: 100%;
+		height: 600px;
+	}
+	/*ket thuc left*/
+	.header-box-project{
+		background: none repeat scroll 0 0 #055699;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		width: 100%;
+		height: 25px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.header-box-project p{
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		line-height: 25px;
+		font-weight: bold;
+	}
+	.project-bds{
+		width: 100%;
+		margin:0 auto;
+		border: solid 1px #999;
+		border-left: 1px solid #999;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 4px;
+		height: 400px;
+		overflow-y: scroll;
+	}
+	.project-bds img{
+		margin-top: 5px;
+		width: 150px;
+		height: 100px;
+		
+	}
+	.project-bds ul li{
+		list-style: none;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.project-bds ul li a{
+		color: #444;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+	}
+	.suport-box{
+		width: 100%;
+		margin:0 auto;
+		border: solid 1px #999;
+		border-left: 1px solid #999;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 4px;
+	}
+	.suport-box ul li{
+		list-style: none;
+		text-align: center;
+		width: 90%;
+		margin-left: 10px;
+		padding: 10px 10px;
+		border-bottom: 1px solid #999; 
+		line-height: 30px;
+	}
+	.suport-box ul li:last-child{
+		border: none;
+	}
+	.suport-box img{
+		width: 27px;
+		height: 25px;
+		margin-right: 5px;
+	}
+	.suport-box ul li a{
+		text-decoration: none;
+		color:  #055699 ;
+		font-weight: bold;
+		text-align: center;
+	}
+	.slide-list img{
+		width: 80px;
+		height: 40px;
+	}
+	.slide-box ul li{
+		list-style: none;
+		width: 90%;
+		margin-left: 10px;
+		padding: 10px 10px;
+		line-height: 30px;
+	}
+	.slide-box{
+		width: 100%;
+		margin:0 auto;
+		border: solid 1px #999;
+		border-left: 1px solid #999;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding-bottom: 4px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		min-height: 610px;
+	}
+	.slide-box ul li a{
+		color: #055699;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.vip-row{
+		background-image: url("../../uploads/logo/broker_line_bg.jpg");
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		color: #333!important;
+		height: 10px;
+	}
+	.link-all{
+		background-image: url("../../uploads/logo/broker_view_all.jpg");
+		background-position: left center;
+		background-repeat: no-repeat;
+		padding-left: 30px;
+		line-height: 30px;
+		display: block;
+		margin-left: 10px;
+		clear: both;
+		text-decoration: none;
+		color: #000;
+	}
+	.link-all a{
+		text-decoration: none;
+		color: #055699;
+	}
+	.ads-app{
+		width: 100%;
+		height: 175px;
+		background: url("../../uploads/logo/bg.jpg")no-repeat;
+		background-position: center;
+		background-size:100%;
+		float: left;
+		margin-top: 10px;
+	}
+	.app-link img{
+		padding-top: 5px;
+	}
+	.app-link{
+		margin-top: 90px;
+		margin-left: 5px;
+	}
+	.bds-intro{
+		margin-top: 20px;
+	}
+	.bds-title p{
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 5px;
+		margin: 0;
+	}
+	.bds-ct a{
+		text-decoration: none;
+		color: #000;
+	}
+	.bds-set-home{
+		margin-top: 30px;
+	}
+	.btn-home-set img{
+		width: 118px;
+		height: 20px;
+		float: right;
+	}
+	.set-header a{
+		float: right;
+		color:  #055699;
+	}
+	/*ket thuc content*/
+	.footer-header{
+		display: flex;
+	}
+	.footer-header-left{
+		background: url("../../uploads/logo/baochi1.jpg");
+		background-size: 185px;
+		width: 185px;
+		height: 35px;
+	}
+	.footer-header-right{
+		height: 35px;
+		width: 810px;
+		background: #cfe5f2; 
+	}
+	.footer-header-right marquee{
+		line-height: 35px;
+	}
+	.form-email{
+		width: 100%;
+		height: 40px;
+		background: #e8f1f6;
+		line-height: 40px;
+		border: 1px solid #dedede;
+		padding: 0 10px;
+		border-radius: 4px;
+		margin: 40px 0 30px;
+	}
+	.form-email-img{
+		margin:0px 5px 0px 0px;
+	}
+	.form-email-text{
+		color: #055699;
+		font-size: 15px;
+		margin-right: 27px;
+	}
+	.form-email-form input{
+		border: 1px solid #aac0ce;
+		margin-top: 4px;
+		border-right: 0;
+		border-radius: 4px 0 0 4px;
+		height: 30px;
+		line-height: 40px;
+		padding: 0 15px;
+		width: 380px;
+		font-size: 13px;
+	}
+	.form-email-form button{
+		margin-top: 3px;
+		display: inline-block;
+		width: 105px;
+		border: 1px solid #86b4d5;
+		border-radius: 0 4px 4px 0;
+		height: 30px;
+		line-height: 28px;
+		color: #fff;
+		font-weight: bold;
+		background-color: #0e5084;
+		text-align: center;
+		font-size: 14px;
+	}
+	.footer-middle{
+		width: 100%;
+		margin-top: 10px;
+    background: #ededed;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 20px;	
+	}
+	.footer-middle ul li{
+		list-style: none;
+		 margin:5px 0; 
+	}
+	.footer-middle ul li a{
+	text-decoration: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: normal;
+   
+	}
+	.footer-middle-link a{
+		font-weight: bold;
+    color: #055699;
+    text-decoration: none;
 	}
 }

@@ -749,11 +749,11 @@
                                                 <div>
                                                      <a href=""><img src="uploads/images/20191012113752-0896.jpg" alt=""></a>
                                                  <div class="group-news-new-left-title">
-                                                         <a href="">1001 ý tưởng tái chế pallet gỗ làm nội thất gia đình Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur velit fugit possimus, eum provi</a>
+                                                         <a href="">1001 ý tưởng tái chế pallet gỗ làm nội thất gia đình</a>
                                                 </div>
                                                  <div class="group-news-new-left-intro">
                                                     <p>Trước kia, ứng dụng của pallet gỗ chỉ giới hạn trong ngành công nghiệp vận chuyển. Tuy nhiên, những năm gần đây, nhiều người bắt đầu tìm cách tái chế pallet gỗ, biến chúng
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur velit fugit possimus, eum provident! Dolorum, cumque, inventore? Architecto magnam, nisi placeat sint necessitatibus illo, nostrum aperiam provident laudantium ratione suscipit!</p>
+                                                    </p>
                                                 
                                                  </div>
                                              </div>
@@ -796,24 +796,599 @@
                                              </div>
                                         </div>
                                      </div>
+                                     <div class="row list-news-blue">
+                                         <div>
+                                             <ul>
+                                                 <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                                <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                                <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                                <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                                <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                                <li><a href="">Chọn màu sắc tủ bếp hợp phong thủy để kích hoạt tài lộc</a></li>
+                                             </ul>
+                                         </div>
+                                     </div>
                                 </div>
-    
-                                
+                                <!-- ketthuc list-blue -->
+            
+                                <div class="row common">
+                                    <div class="box-header">
+                                        <p>tìm kiếm tiêu biểu theo từ khóa</p>
+                                    </div>
+                                    <div class="bor-box">
+                                        <div class="row">
+                                        <div class="col-md-6 tag-list-left">
+                                            <ul>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 tag-list-right">
+                                            <ul>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                                <li><a href="">Bán nhà Quận 12</a></li>
+                                            </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>  
                             </div>
                             <div class="col-md-3">
-                                ll
+                                <div class="row">
+                                    <div class="header-box-right">
+                                        <p>tiêu điểm tuần qua</p>
+                                    </div>
+                                    <div class="new-last-week">
+                                            <ul >
+                                                <li><a href="">"Càng cắm đầu mua đất Đông Anh, càng làm giá cho người bán"</a></li>
+                                                <li><a href="">"Càng cắm đầu mua đất Đông Anh, càng làm giá cho người bán"</a></li>
+                                                <li><a href="">"Càng cắm đầu mua đất Đông Anh, càng làm giá cho người bán"</a></li>
+                                                <li><a href="">"Càng cắm đầu mua đất Đông Anh, càng làm giá cho người bán"</a></li>
+                                                <li><a href="">"Càng cắm đầu mua đất Đông Anh, càng làm giá cho người bán"</a></li>
+                                            </ul>    
+                                    </div>   
+                                </div>
+                                <!--  -->
+                                <div class="row">
+                                    <div class="header-box-right">
+                                        <p>lời khuyên</p>
+                                    </div>
+                                    <div class="new-last-week">
+                                            <ul >
+                                                <li><a href="">[Infographic] 10 kỹ năng không thể thiếu trong nghề môi giới bất động sản</a></li>
+                                                <li><a href="">[Infographic] 10 kỹ năng không thể thiếu trong nghề môi giới bất động sản</a></li>
+                                                <li><a href="">[Infographic] 10 kỹ năng không thể thiếu trong nghề môi giới bất động sản</a></li>
+                                                <li><a href="">[Infographic] 10 kỹ năng không thể thiếu trong nghề môi giới bất động sản</a></li>
+                                                <li><a href="">[Infographic] 10 kỹ năng không thể thiếu trong nghề môi giới bất động sản</a></li>
+                                            </ul>    
+                                    </div>   
+                                </div>
+                                <!--  -->
+                                <div class="row">
+                                    <div class="header-box-right">
+                                        <p>treo tranh phong thủy</p>
+                                    </div>
+                                    <div class="new-last-week">
+                                        <div class="pictures-pt">
+                                            <a href="">
+                                                 <img src="uploads/logo/20191014101353-c1e6.png" alt="">   
+                                                 <p>Ý nghĩa của việc treo tranh đồng theo phong thủy</p>
+                                            </a>
+                                        </div>
+                                            <ul >
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?    </a></li>
+                                            </ul>    
+                                    </div>   
+                                </div>
+                                <!--  -->
+                                <div class="row">
+                                    <div class="header-box-right">
+                                        <p>tư vẫn nội -ngoại thất</p>
+                                    </div>
+                                    <div class="new-last-week">
+                                        <div class="tuvan-nt">
+                                            <div>
+                                                <img src="uploads/logo/icon_user.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p><strong>Tư vấn nội - ngoại thất từ chuyên gia</strong></p>
+                                            </div>
+                                        </div>
+                                            <ul >
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?</a></li>
+                                                <li><a href="">Chọn tranh phong thủy phòng ngủ thế nào cho đúng?    </a></li>
+                                            </ul>    
+                                    </div>   
+                                </div>
+                                <!--  -->
+                                <div class="row">
+                                    <div class="fb-fanpage">
+                                        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f3501ca882fe5ec&amp;origin=https%3A%2F%2Fbatdongsan.com.vn" style="border: none;"></iframe></div><div></div></div></div>
+                                        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/Batdongsandv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=302507473246792&amp;container_width=210&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FBatdongsandv%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false"><span style="vertical-align: bottom; width: 210px; height: 214px;"><iframe name="f13ee054670e78" width="1000px" height="1000px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.10/plugins/page.php?adapt_container_width=true&amp;app_id=302507473246792&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df612a7c8e05404%26domain%3Dbatdongsan.com.vn%26origin%3Dhttps%253A%252F%252Fbatdongsan.com.vn%252Ff3501ca882fe5ec%26relation%3Dparent.parent&amp;container_width=210&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FBatdongsandv%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false" style="border: none; visibility: visible; width: 185px; height: 214px;" class=""></iframe></span></div>
+                                        </div>
+                                </div>
                             </div>
+                            <!-- ket thuc right of left -->
                         </div>
                     </div>
                     <!-- ket thuc left -->
                     <div class="col-md-3">
-                        ff
+                        <div class="row ads-right">
+                            <img src="uploads/logo/2012210033_bannerright.png" alt="">
+                        </div>
+                        <!--  -->
+                        <div class="row">
+                             <div class="header-box-project">
+                                <p>dự án nổi bật</p>
+                             </div>
+                            <div class="project-bds"> 
+                                <ul >
+                                    <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Khu Đô Thị Cát Tường Western Pearl</p>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Asian Lake View</p>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Khu Đô Thị Cát Tường Western Pearl</p>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Asian Lake View</p>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Asian Lake View</p>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="">
+                                            <img src="uploads/logo/20191005093217-b16b.jpg" alt="">
+                                            <p>Asian Lake View</p>
+                                        </a>
+                                    </li>
+                                </ul>    
+                            </div>   
+                        </div>
+                        <!--  -->
+                        <div class="row">
+                             <div class="header-box-project">
+                                <p>hỗ trợ tiện ích</p>
+                             </div>
+                            <div class="suport-box"> 
+                                <ul >
+                                    <li>
+                                        <a href="">
+                                             <div class="d-flex">
+                                                <div >
+                                                    <img src="uploads/logo/icon-phongthuy.png" alt="">
+                                                </div>
+                                                 <div >
+                                                     <p>Tư vấn phong thủy</p>
+                                                 </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                             <div class="d-flex">
+                                                <div >
+                                                    <img src="uploads/logo/icon-chiphi.png" alt="">
+                                                </div>
+                                                 <div >
+                                                     <p>Dự tính chi phí làm nhà</p>
+                                                 </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                             <div class="d-flex">
+                                                <div >
+                                                    <img src="uploads/logo/icon-laisuat.png" alt="">
+                                                </div>
+                                                 <div >
+                                                     <p>Tính lãi suất</p>
+                                                 </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                </ul>    
+                            </div>   
+                        </div>
+                        <!--  -->
+                        <div class="row">
+                            <div class="header-box-project">
+                                <p>nhà môi giới tiêu biểu</p>
+                            </div>
+                            <div class="slide-box">
+                                 <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                                      <!-- The slideshow -->
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active slide-list">
+                                            <ul>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20190718101137-51a6.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20190718101137-51a6.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ BĐS HỘI TỤ</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20190718101137-51a6.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20190718101137-51a6.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20190718101137-51a6.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                            </ul>
+                                            <div class="link-all">
+                                                <a href="">Xem tất cả</a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item slide-list">
+                                             <ul>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20180710141143-5c21.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20180710141143-5c21.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20180710141143-5c21.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20180710141143-5c21.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                                <li><a href="">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                          <img src="uploads/images/20180710141143-5c21.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p>BẤT ĐỘNG SẢN ĐỨC PHÁT</p> 
+                                                    </div>
+                                                    </div>
+                                                    <div class="vip-row"></div>
+                                                </a></li>
+                                            </ul>
+                                            <div class="link-all">
+                                                <a href="">Xem tất cả</a>
+                                            </div>
+                                        </div>  
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="row ads-app">
+                            <div class="app-link">
+                                <div>
+                                    <img src="uploads/logo/app-ios.jpg" alt="">
+                                </div>
+                               <div>
+                                   <img src="uploads/logo/app-android.jpg" alt="">
+                               </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- ket thuc right -->
+                    <div class="row bds-intro">
+                        <div class="col-md-10">
+                            <div class="bds-title">
+                                <p>Mua bán và cho thuê nhà đất trên Batdongsan.com.vn</p>
+                            </div>
+                            <div class="bds-ct">
+                                <p>Batdongsan.com.vn có hơn <strong>1.000.000</strong> tin cho thuê và <strong><a href="">mua bán nhà đất</a></strong> tại Việt Nam. Chúng tôi liệt kê danh sách nhiều thông tin nhà đất nhất phục vụ mọi nhu cầu, từ phòng trọ tới biệt thự cao cấp. Bạn là nhà đầu tư hay gia đình cần nhà để ở? Batdongsan.com.vn đều có thể giúp bạn. Tìm tin bán nhà đất hoặc cho thuê nhà đất mới nhất bằng cách sử dụng công cụ tìm kiếm hoặc các đường link ngay trên trang chủ.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="bds-set-home">
+                                <div class="set-header">
+                                    <a href="#">Lên đầu trang</a>
+                                </div>
+                                <div class="btn-home-set">
+                                    <a href="">
+                                        <img src="uploads/logo/sethome.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                    <!-- row end content-->
                 </div>
             </div>
             <!--ket thuc noi dung</!-->
-            <div class="footer"></div>
+            <div class="footer">
+                <div class="row">
+                    <div class="footer-header">
+                        <div class="footer-header-left">
+                        </div>
+                        <div class="footer-header-right">
+                            <marquee behavior="" direction="">Thanh Niên:  Tập đoàn PropertyGuru hợp tác đầu tư với website Batdongsan.com.vn  Tiền Phong: Hàng triệu USD được đầu tư vào dịch vụ địa ốc VnExpress: Đại gia bất động sản trực tuyến châu Á đầu tư vào Việt Nam  Báo đầu tư Bài học thành công cho các start-up lĩnh vực công nghệ </marquee>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-header -->
+                <div class="row form-email">
+                    <div class="form-email-img">
+                        <img src="uploads/logo/icon-newsletter.jpg" alt="">
+                    </div>
+                    <div class="form-email-text">
+                        <p>Đăng ký ngay để nhận bản tin điện tử từ Batdongsan.com.vn</p>
+                    </div>
+                    <div class="form-email-form">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="" placeholder="Nhập email của bạn">
+                                 <button type="submit">Đăng Ký</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- form -->
+                <div class="row footer-middle">
+                    <div class="col-md-3">
+                        <div class="footer-middle-link">
+                            <a href="">NHÀ ĐẤT HÀ NỘI</a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                                <li><a href="">Chung cư Emerald Center Park</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-middle-link">
+                            <a href="">NHÀ ĐẤT TP HCM</a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                                <li><a href="">Vinhomes Grand Park </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT HẢI PHÒNG</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Bán nhà Kiến An</a></li>
+                                    <li><a href="">Bán nhà Kiến An</a></li>
+                                    <li><a href="">Bán nhà Kiến An</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT LÀO CAI</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Biệt thự Sapa Jade Hill</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT THANH HÓA</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Căn hộ Vincom Shophouse Thanh Hóa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT YÊN BÁI</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Căn hộ Vincom Shophouse Yên Bái</a></li>
+                                </ul>
+                            </div>
+                        </div>  
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT HẢI PHÒNG</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Biệt thự Vinpearl Premium Đà Nẵng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT KIÊN GIANG</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Căn hộ Premier Residences Phú Quốc</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT KHÁNH HÒA</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Biệt thự Vinpearl Nha Trang</a></li>
+                                    <li><a href="">Biệt thự Vinpearl Nha Trang</a></li>
+                                    <li><a href="">Biệt thự Vinpearl Nha Trang</a></li>
+                                    <li><a href="">Biệt thự Vinpearl Nha Trang</a></li>
+                                    <li><a href="">Biệt thự Vinpearl Nha Trang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer-middle-link"> 
+                                <a href="">NHÀ ĐẤT ĐỒNG NAI</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Bán nhà Biên Hòa</a></li>
+                                    <li><a href="">Bán nhà Biên Hòa</a></li>
+                                    <li><a href="">Bán nhà Biên Hòa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT BÌNH DƯƠNG</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Bán nhà Dĩ An</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="footer-middle-link">
+                                <a href="">NHÀ ĐẤT LONG AN</a>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="">Bán nhà xã Mỹ Hạnh Nam</a></li>
+                                    <li><a href="">Bán nhà xã Mỹ Hạnh Nam</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ket thuc footer-midde -->
+            </div>
             <!--ket thucfooter</!-->
         </div>
     </div>
