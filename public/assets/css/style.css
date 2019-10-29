@@ -919,25 +919,561 @@ body{
 	.footer-middle{
 		width: 100%;
 		margin-top: 10px;
-    background: #ededed;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 20px;	
+		background: #ededed;
+		border-bottom: 1px solid #ccc;
+		border-top: 1px solid #ccc;
+		padding: 20px;	
 	}
 	.footer-middle ul li{
 		list-style: none;
-		 margin:5px 0; 
+		margin:5px 0; 
 	}
 	.footer-middle ul li a{
-	text-decoration: none;
-    color: #000;
-    font-size: 11px;
-    font-weight: normal;
-   
+		text-decoration: none;
+		color: #000;
+		font-size: 11px;
+		font-weight: normal;
+	}
+	.footer-middle ul li a:hover{
+		text-decoration: underline;
+		color:  #055699;
+		
 	}
 	.footer-middle-link a{
 		font-weight: bold;
-    color: #055699;
-    text-decoration: none;
+		color: #055699;
+		text-decoration: none;
+	}
+	.footer-home{
+		margin-top: 20px!important;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.footer-home ul li{
+		display: inline-table;
+		border-right: 1px solid #055699;	
+	}
+	.footer-home ul li:last-child{
+		border: none;
+	}
+	.footer-home ul li a{
+		text-decoration: none;
+		color: #055699;
+		font-weight: bold;
+		padding-right: 5px;
+		font-size: 11px;
+	}
+	.footer-home-last{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.footer-home-last ul{
+		text-align: center;	
+	}
+	.footer-home-last ul li{
+		display: inline-table;
+		border-right: 1px solid #055699;	
+	}
+	.footer-home-last ul li:last-child{
+		border: none;
+	}
+	.footer-home-last ul li a{
+		text-decoration: none;
+		color: #055699;
+		font-weight: bold;
+		padding-right: 5px;
+		font-size: 11px;
+	}
+	.footer-bottom-end{
+		margin-top: 22px;
+		text-align: center;
+		background: #ededed;
+		border-top: 1px solid #ccc;
+		padding: 15px;
+		clear: both;
+	}
+	.clear{
+		clear: both;
+		height: 10px;
+	}
+	.footer-end-row{
+		text-align: left;
+		text-align: left;
+		padding-left: 5px;
+		color: #222;
+	}
+	.footer-bottom-end p{
+		margin: 0px;
+	}
+	/*bat dau css trang nha dat*/
+	.produt-page .title h1{
+		color: #055699;
+		font-weight: bolder;
+		margin: 3px 0;
+		padding: 0 0 7px;
+		font-size: 18px;
+	}
+	.produt-page-header ul{
+		margin-right: 10px;
+	}
+	.produt-page-header ul li{
+		border: 1px solid  #76a1b2;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		margin-left: 5px;
+	}
+	.produt-page-header ul li span{
+		line-height: 26px;
+	    display: block;
+	    padding: 0 3px;
+	    font-weight: bold;
+	    background: #e3eef4;
+	    border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+	.produt-page-header ul li a{
+		color: #000;
+	}
+	.produt-page-header ul li:first-child{
+		margin-left: 0px !important;
+	}
+	.header-bg-blue{
+		background: #055699;
+		width: 750px;
+	}
+	.produt-page-content .repeat{
+		background: #055699;
+	    color: #FFF;
+	    font-weight: bold;
+	    line-height: 30px;
+	}
+	.produt-page-content .order{
+		background: #055699;
+	    color: #FFF;
+	    line-height: 30px;
+	    margin-left: 5px;
+	}
+	.repeat{
+		width: 70%;
+	}
+	.repeat h2{
+		text-align: center;
+	    font-weight: bold;
+	    color: #fff;
+	    font-size: 12px;
+	    line-height: 20px;
+	    margin-top: 5px;
+	}
+	.product-page-list ul li{
+		list-style: none;
+		padding: 10px 2px;
+	    font-family: tahoma;
+	    border-bottom: 1px solid #B32626;
+	    border-left: 1px solid #B32626;
+	    border-right: 1px solid #B32626;
+	}
+	.p-title a{
+		text-decoration: none;
+	}
+	.p-title a h3{
+	   font-size: 12px;
+	    font-weight: bold;
+	    text-decoration: none;
+	    color: #B32626;
+	    padding-left: 20px;
+	    background: url("../../uploads/logo/flat-star.png");
+	    background-repeat: no-repeat;
+	}
+	.product-avatar-img img{
+		width: 175px;
+		height: 116px;
+	}
+	.p-main-text{
+		color: #000;
+	    font-family: tahoma;
+	    font-size: 12px;
+	    margin-right: 7px;
+	    line-height: 18px;
+	    margin-top: 0;
+	    text-align: justify;
+	    padding: 5px 10px;
+	}
+	.p-main-text-bottom{
+		margin-top: 20px;
+		margin-left: 5px;
+	}
+	.swap strong{
+		color: #055699;
+   	    font-weight: bold;
+	}
+	.uptime{
+		margin-left: 50px;
+	}
+	.news-form-small{
+		padding: 0px 5px;
+		border: 1px solid #ccc;
+	    border-radius: 4px;
+	    padding: 5px 5px 7px;
+	    margin-bottom: 10px;
+	}
+	.news-form-small span{
+		color: #055699;
+	    font-weight: bold;
+	    font-size: 11px;
+	    margin-top: 3px;
+	}
+	.newletter-content input{
+		border: 1px solid #ccc;
+	    border-right: 0;
+	    border-radius: 4px 0 0 4px;
+	    height: 28px;
+	    line-height: 28px;
+	    padding: 0 10px;
+	    font-size: 13px;
+	    width: 133px;
+	}
+	.newletter-content button{
+		display: inline-block;
+	    width: 72px;
+	    border: 1px solid #ccc;
+	    border-radius: 0 4px 4px 0;
+	    height: 28px;
+	    line-height: 28px;
+	    color: #fff;
+	    font-weight: bold;
+	    background-color: #0e5084;
+	    text-align: center;
+	}
+	.product-page-box{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.product-box-address {
+	    border: 1px solid #d7d7d7;
+	    overflow: hidden;
+	    padding: 0 12px;
+	}
+	.product-box-address input{
+		margin: 5px 0px 10px 0px;
+		height: 25px;
+	    line-height: 20px;
+	    border: 1px solid #ccc;
+	    width: 100%;
+	    padding: 0 5px;
+	    font-size: 13px;
+	}
+	.product-box-address select{
+	    border: 1px solid #ccc;
+	    cursor: pointer;
+	    float: left;
+	    height: 23px;
+	    left: 0;
+	    line-height: 27px;
+	    overflow: hidden;
+	    text-align: left;
+	    width: 100%;
+	    margin: 7px 0px;
+	}
+	.btn-Search-Context button{
+		text-align: center;
+		border: none;
+		border-radius: 5px;
+		margin-left: 60px;
+		background: #055699;
+		line-height: 25px;
+		color: #fff;
+		padding: 0 10px;
+	}
+	.link-advanced p{
+		color: #055699;
+	    font-weight: bold;
+	    line-height: 15px;
+	    text-decoration: none;
+	    padding: 5px;
+	    cursor: pointer;
+	}
+	.link-advanced{
+		text-align: center;
+	}
+	.searchadvanced{
+		display: none;
+	}
+	#searchBase{
+		display: none;
+	}
+	#hideSearchBase{
+		display: none;
+	}
+	.product-address{
+		width: 100%;
+		border: solid 1px #999;
+	    border-left: 1px solid #999;
+	    border-right: 1px solid #999;
+	    border-bottom: 1px solid #999;
+	    padding-bottom: 4px;
+	}
+	.product-address ul li{
+		list-style: none;
+		text-decoration: none;
+	}
+	.product-address ul li a{
+		color: #055699;
+    	text-decoration: none;
+    	padding-left: 10px;
+    	padding-right: 5px;
+	}
+	.product-build-house{
+		width: 100%;
+	    border: solid 1px #999;
+	    border-left: 1px solid #999;
+	    border-right: 1px solid #999;
+	    border-bottom: 1px solid #999;
+	    padding-bottom: 4px;
+
+	}
+	.product-build-house ul{
+		margin-top: 5px;
+		margin-bottom: 0px;
+	}
+	.product-build-house ul li a{
+		color: #000;
+		text-decoration: none;
+	}
+	.product-build-house ul li:last-child{
+		border: none;
+	}
+	.product-build-house ul li{
+		list-style: none;
+		padding: 10px;
+		border-bottom: 1px solid  #d7d7d7;
+	}
+	.product-build-house ul li:hover{
+		
+		font-weight: bold;
+	}
+	.header-box-car{
+		width: 100%;
+	    border: solid 1px #999;
+	    border-left: 1px solid #999;
+	    border-right: 1px solid #999;
+	    border-bottom: 1px solid #999;
+	    padding-bottom: 4px;
+	}
+	.header-box-car ul li{
+		list-style: none;
+		background: url("../../uploads/logo/bullet-xanh.jpg") no-repeat 7px 13px;
+		padding: 5px 7px 2px 19px;
+	}
+	.header-box-car ul li a{
+		text-decoration: none;
+		color: #000;
+	}
+	.header-box-car ul li a:hover{
+		text-decoration: none;
+		color: #055699;
+	}
+	/*bat dau css trang du an bat dong san*/
+	.prj-top-search{
+		width: 1000px;
+	    padding: 15px 15px 15px 15px;
+	    box-sizing: border-box;
+	    border: 1px solid #c6c6c6;
+	    margin-bottom: 20px;
+	}
+	.prj-top-search .col1{
+		float: left;
+	    width: 125px;
+	    margin-right: 10px;
+	    color: #055699;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	}
+	.prj-top-search .col1 h2{
+	   font-size: 14px;
+  	   line-height: 25px;
+	}
+	.prj-top-search .col2 input{
+		width: 680px;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    line-height: 23px;
+	    padding: 0 10px;
+	    height: 23px;
+	}
+	.prj-top-search .col3{
+	    background: url("../../uploads/logo/tim-kiem-du-an.jpg") no-repeat;
+	    width: 101px;
+	    height: 25px;
+	    margin-left: 10px;
+	    line-height: 25px;
+	    padding-left: 35px;
+	    color: #fff;
+	    border: 0;
+	}
+	.showAdressSearch {
+		margin-top: 10px;
+	}
+	.showAdressSearch select{
+		padding: 3px;
+		border-radius: 3px;
+	    border: 1px solid #ccc;
+	    cursor: pointer;
+	    height: 23px;
+	    width: 155px;
+	    line-height: 27px;
+	    overflow: hidden;
+	    margin-right: 20px;
+	    margin-bottom: 10px;
+	}
+	.showAdressSearch select{
+		display: none;
+	}
+	.showSearchDuAn{
+		text-align: center;
+	}
+	#compactLinkSearch{
+		display: none;
+	}
+	.slide-du-an{
+		padding: 3px;
+	}
+	.slide-du-an .title a{
+		color: #055699 !important;
+	    font-size: 16px;
+	    font-weight: bolder;
+	    line-height: 25px;
+	}
+	.slide-du-an p{
+		color: #555;
+	    margin-top: 5px;
+	    max-height: 220px;
+	    font-size: 14px;
+	    line-height: 22px;
+	}
+	.carousel-indicators li{
+		background-color: #055699 !important; 
+	}
+	.slide-img img{
+		width: 760px;
+		height: 270px;
+	}
+	.prj-inline{
+		margin-top: 15px;
+	}
+	.prj-inline .col1{
+		width: 390px;
+	    float: left;
+	    border-bottom: 1px solid #dedede;
+	    height: 50%;
+	    margin-bottom: 30px;
+	}
+	.prj-inline .col2 {
+	    float: left;
+	    width: 214px;
+	    text-align: center;
+	}
+	.prj-inline .col2 h2{
+		color: #055699;
+	    text-transform: uppercase;
+	    font-size: 18px;
+	    font-weight: normal;
+	    line-height: 30px;
+	}
+	.prj-inline-list ul li{
+		display: block;
+	    border: 1px solid #dedede;
+	    width: 230px;
+	    vertical-align: top;
+	    height: 280px;
+	    float: left;
+	    margin: 0 20px 20px 0;
+	    list-style: none;
+	}
+	.duan-img img{
+		width: 229px;
+    	height: 150px;
+	}
+	.prj-name a{
+		color: #055699;
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin: 10px 0;
+	}
+	.prj-name{
+		padding: 3px;
+		margin-top: 3px;
+	}
+	.prj-address{
+		padding: 3px;
+	}
+	.prj-price{
+		padding: 3px;
+	}
+	.prj-name a{
+		text-decoration: none;
+	}
+	.prj-inline-list .list-house{
+		height: 250px !important;
+	}
+	.prj-top-by-cate ul li{
+		color: #055699;
+    	list-style: none;
+	}
+	.prj-top-by-cate ul li a{
+		text-decoration: none;
+	}
+    .prj-top-by-cate ul li span{
+		font-size: 18px;
+	    text-transform: uppercase;
+	    margin-right: 25px;
+	    color: #555;
+	    font-weight: normal;
+	    margin-bottom: 5px;
+	    padding-bottom: 2px
+	}
+	.prj-top-by-cate ul li  .active span{
+		color: #055699;
+    	border-bottom: 2px solid #055699;
+	}
+	.prj-top-by-content{
+		margin-top: 20px;
+	}
+	.prj-top-by-content ul li{
+		list-style: none;
+	    display: block;
+	    border: 1px solid #dedede;
+	    margin-bottom: 20px;
+	    clear: both;
+	    color: #555;
+	    width: 665px;
+	}
+	.tab-left img{
+		width: 220px;
+		height: 144px;
+	}
+	.tab-right{
+		padding: 10px;
+		width:100%; 
+	}
+	.title-tab a{
+		color: #055699;
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin-bottom: 15px;
+	    display: block;
+	}
+	.tab-right-address{
+		margin:8px 0px;
+		display: inline-block;
+	    text-align: left;
+	}
+	.tab-right-price{
+		margin:8px 0px;
+		display: inline-block;
+	    text-align: left;
+	}
+	.price-bold{
+		font-size: 14px;
+    	font-weight: bold;
 	}
 }
