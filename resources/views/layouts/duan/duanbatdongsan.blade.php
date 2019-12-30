@@ -41,29 +41,32 @@
     </div>
 </div>
 <div class="row">
-    <div id="slideDuan" class="carousel slide" data-ride="carousel">
+    <div id="slideDuan1" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ul class="carousel-indicators">
-            <li data-target="#slideDuan" data-slide-to="0" class="active"></li>
-            <li data-target="#slideDuan" data-slide-to="1"></li>
+            <li data-target="#slideDuan1" data-slide-to="0" class="active"></li>
+            <li data-target="#slideDuan1" data-slide-to="1"></li>
         </ul>
-
         <!-- The slideshow -->
         <div class="carousel-inner">
-            <div class="carousel-item active d-flex slide-img">
-                <img src="uploads/images/20181227104344-8690.jpg" alt="Los Angeles">
-                <div class="slide-du-an">
-                    <h3 class="title"><a href="">Căn hộ CT4 VCN Phước Hải</a></h3>
-                    <p>
-                        An Phát Luxury do Công ty CP Đầu tư và xây dựng địa ốc An Phát làm chủ đầu tư, triển khai trên quỹ đất rộng 5,045m2 tại TX. Thuận An, tỉnh Bình Dương.</p>
+            <div class="carousel-item active">
+                <div class="d-flex slide-img">
+                    <img src="uploads/images/20181227104344-8690.jpg" alt="Los Angeles">
+                    <div class="slide-du-an">
+                        <h3 class="title"><a href="">Căn hộ CT4 VCN Phước Hải</a></h3>
+                        <p>
+                            An Phát Luxury do Công ty CP Đầu tư và xây dựng địa ốc An Phát làm chủ đầu tư, triển khai trên quỹ đất rộng 5,045m2 tại TX. Thuận An, tỉnh Bình Dương.</p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item d-flex slide-img">
-                <img src="uploads/images/20181227104344-8690 (1).jpg" alt="Chicago">
-                <div class="slide-du-an">
-                    <h3 class="title"><a href="">Căn hộ CT4 VCN Phước Hải</a></h3>
-                    <p>
-                        An Phát Luxury do Công ty CP Đầu tư và xây dựng địa ốc An Phát làm chủ đầu tư, triển khai trên quỹ đất rộng 5,045m2 tại TX. Thuận An, tỉnh Bình Dương.</p>
+            <div class="carousel-item"> 
+                <div  class="d-flex slide-img">
+                    <img src="uploads/images/20181227104344-8690 (1).jpg" alt="Chicago">
+                    <div class="slide-du-an">
+                        <h3 class="title"><a href="">Căn hộ CT4 VCN Phước Hải</a></h3>
+                        <p>
+                            An Phát Luxury do Công ty CP Đầu tư và xây dựng địa ốc An Phát làm chủ đầu tư, triển khai trên quỹ đất rộng 5,045m2 tại TX. Thuận An, tỉnh Bình Dương.</p>
+                    </div>
                 </div>
             </div>
         </div>

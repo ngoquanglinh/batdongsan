@@ -66,8 +66,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="p-title">
+                                    <li class="bor-vip1">
+                                        <div class="p-title-vip1">
                                             <a href=""><h3> 360° CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
                                         </div>
                                         <div class="p-main d-flex">
@@ -89,8 +89,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="p-title">
+                                    <li class="bor-vip2">
+                                        <div class="p-title-vip2">
                                             <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
                                         </div>
                                         <div class="p-main d-flex">

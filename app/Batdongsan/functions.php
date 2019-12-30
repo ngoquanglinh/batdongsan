@@ -40,16 +40,17 @@ function changeTitle($str){
    return $str;
 }
 
-function danhmuc_prent($data, $parent=0,$str="--",$select=0){
+function danhmuc_prent($data, $parent=0,$str="",$select=0){
    foreach($data as $val){
       $id=$val["id"];
       $name=$val["d_tendanhmuc"];
       if($val["d_idparent"]==$parent){
-         if($select!=0 && $select){
+         if($select!=0 && $id==$select){
             echo"<option value='$id' selected='selected'>".$str.$name."</option>";
          }else{
             echo"<option value='$id'>".$str.$name."</option>";
          }
+         danhmuc_prent($data, $id,$str.'--');
       }
    }
 }
@@ -69,5 +70,17 @@ function recursiveMenu($sourceArr,$parents=0,&$newMenu,&$Class){
       }
      $newMenu .= '</ul></li>';
    }
+}
+function formatDate($date = '', $format = 'Y-m-d'){
+   if($date == '' || $date == null)
+       return;
+
+   return date($format,strtotime($date));
+}
+function formatDateVN($date = '', $format = 'd-m-Y'){
+   if($date == '' || $date == null)
+       return;
+
+   return date($format,strtotime($date));
 }
 ?>

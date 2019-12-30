@@ -24,37 +24,31 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center">Đăng Nhập</h3>
+                        <h2 class=" text-center">Đăng Nhập</h2>
                     </div>
-                    @if(count($errors)>0)
-                             <div class="alert alert-danger">
-                        @foreach ($errors->all() as $err)
-                              {{$err}}<br>
-                        @endforeach
-                             </div>
-                        @endif
+                    @include('admin.layouts.error')
                     <div class="panel-body">
-                        @if(session('thongbao'))
-                          <div class="alert alert-danger">
-                              {{session('thongbao')}}
-                          </div>
-                               @endif
-                    <form role="form" action="admin/dangnhap" method="POST">
+                    @include('admin.layouts.message');
+                    @if(session('role'))
+                    <div class="alert alert-danger">
+                        {{session('role')}}
+                    </div>
+                    @endif
+                    <form role="form" action="admin/login" method="POST">
                         <fieldset> 
                             @csrf
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Nhập email" name="Email" autofocus>
+                                <input type="email" class="form-control" placeholder="Nhập email" name="Email" autofocus value="">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Nhập Password" name="Password" value="">
                             </div>
-                            <button type="submit" class="btn btn-lg btn-success btn-block">Đăng Nhập</button>
+                            <button type="submit" class="btn btn-lg btn btn-info btn-block">Đăng Nhập</button>
                         </fieldset>
                     </form>
                 </div>

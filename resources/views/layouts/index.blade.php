@@ -10,49 +10,80 @@
                                     <p>Công cụ tìm kiếm</p>
                                 </div>
                                 <div class="tab-search">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="active"><a href="#nhadatban" role="tab" data-toggle="tab">Nhà đất bán</a></li>
-                                        <li><a href="#nhadatthue" role="tab" data-toggle="tab">Nhà đất cho thuê</a></li>
-                                        <li><a href="#moigioi" role="tab" data-toggle="tab">Tìm môi giới</a></li>
+                                    <ul class="nav nav-tabs style-active" role="tablist">
+                                        <li class="nav-item "><a href="#nhadatban" role="tab" data-toggle="tab" class="nav-link active">Nhà đất bán</a></li>
+                                        <li><a href="#nhadatthue" role="tab" data-toggle="tab" class="nav-link ">Nhà đất cho thuê</a></li>
+                                        <li><a href="#moigioi" role="tab" data-toggle="tab" class="nav-link ">Tìm môi giới</a></li>
                                     </ul>
                                     <!-- Tab panes -->
-                                    <div class="tab-content tab-option">
+                                    <div class="tab-content tab-option ">
                                         <div class="tab-pane active" id="nhadatban">
+                                            <div class="set-height-box">
                                             <div>
                                                 <input type="text" placeholder="Nhập địa điểm,vd cali city">
                                             </div>
                                             <div>
                                                 <select name="" id="">
                                                     <option value="">--Chọn loại nhà đất--</option>
-                                                    <option value="">b</option>
+                                                    @foreach($nhadatban as $ndb)
+                                                    <option value="{{$ndb->id}}">{{$ndb->d_tendanhmuc}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="" id="">
+                                                <select name="" id="province">
                                                     <option value="">--Chọn Tỉnh/Thành phố--</option>
-                                                    <option value="">b</option>
+                                                    @foreach($tinh as $t)
+                                                    <option value="{{$t->id}}">{{$t->name}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="" id="">
+                                                <select name="" id="district">
                                                     <option value="">--Chọn Quận/Huyện--</option>
-                                                    <option value="">b</option>
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="" id="">
+                                                <select name="" id="chooseDienTich">
                                                     <option value="">--Chọn loại diện tích--</option>
-                                                    <option value="">b</option>
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="" id="">
+                                                <select name="" id="chooseMucGia">
                                                     <option value="">--Chọn loại mức giá--</option>
                                                     <option value="">b</option>
                                                 </select>
                                             </div>
+                                            <div class="showsearch-advanced">
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn phường/xã--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn số phòng ngủ--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn hướng nhà--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn dự án--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            </div>
                                             <div class="search-leve-btn">
-                                                <span><a href="">Tìm Nâng cao</a></span>
+                                                <span class="TimKiemNangCao"><a >Tìm Nâng cao</a></span>
+                                                <span class="BoTimKiemNangCao"><a>Bỏ Tìm Nâng cao</a></span>
                                                 <span>
                                                     <button type="submit" class="btn-search">
                                                     </button>
@@ -60,7 +91,8 @@
                                             </div>
                                         </div>
                                         <!-- end tab1 -->
-                                        <div class="tab-pane" id="nhadatthue">
+                                        <div class="tab-pane tab-option" id="nhadatthue">
+                                            <div class="set-height-box">
                                             <div>
                                                 <input type="text" placeholder="Nhập địa điểm,vd cali city">
                                             </div>
@@ -94,8 +126,36 @@
                                                     <option value="">b</option>
                                                 </select>
                                             </div>
+                                            <div class="showsearch-advanced">
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn phường/xã--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn số phòng ngủ--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn hướng nhà--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <select name="" id="chooseMucGia">
+                                                        <option value="">--Chọn dự án--</option>
+                                                        <option value="">b</option>
+                                                    </select>
+                                                </div>
+                                            </div>   
+                                            </div>
                                             <div class="search-leve-btn">
-                                                <span><a href="">Tìm Nâng cao</a></span>
+                                                <span class="TimKiemNangCao"><a>Tìm Nâng cao</a></span>
+                                                <span class="BoTimKiemNangCao"><a>Bỏ Tìm Nâng cao</a></span>
                                                 <span>
                                                     <button type="submit" class="btn-search">
                                                     </button>
@@ -135,9 +195,8 @@
                                                 </select>
                                             </div>
                                             <div class="search-leve-btn">
-
                                                 <span>
-                                                    <button type="submit" class="btn-search">
+                                                    <button type="submit" class="btn-search-edit">
                                                     </button>
                                                 </span>
                                             </div>
@@ -275,7 +334,7 @@
                                                     <img src="uploads/images/20191012113752-0896.jpg" alt="">
                                                 </div>
                                                 <div class="product-infor">
-                                                    <div class="product-title">
+                                                    <div class="product-title product-vip">
                                                         <a href="">Cần bán 67,5m2 đất nền khu phố chợ Lương Sơn, Hòa Bình</a> 
                                                     </div>
                                                     <div class="product-infor-content">
@@ -303,7 +362,7 @@
                                                     <img src="uploads/images/20191012113752-0896.jpg" alt="">
                                                 </div>
                                                 <div class="product-infor">
-                                                    <div class="product-title">
+                                                    <div class="product-title  product-vip1">
                                                         <a href="">Cần bán 67,5m2 đất nền khu phố chợ Lương Sơn, Hòa Bình</a> 
                                                     </div>
                                                     <div class="product-infor-content">
