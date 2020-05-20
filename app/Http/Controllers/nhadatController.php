@@ -15,6 +15,7 @@ use App\anhbds;
 class nhadatController extends Controller
 {
   public function NhaDatBan(){
+      
     return view('layouts.nhadatban.nhadat');
    }
     public function LoaiNhaDatBan(){

@@ -1,10 +1,9 @@
-
 <div class="navs">
 	<a href="trang-chu"><img src="uploads/logo/homea.png" alt="" style="width:44px;float:left;height: 29px; margin-left:3px"></a>
-		<?php
-			 recursiveMenu($danhmuc,0,$newMenu,$Class);
-			 echo str_replace("<ul class='sub-menu'></ul>",'',$newMenu);
-		?>
+	<?php
+	recursiveMenu($danhmuc, 0, $newMenu, $Class);
+	echo str_replace("<ul class='sub-menu'></ul>", '', $newMenu);
+	?>
 </div>
 <!-- <div class="row submenu">
 	<div class="col-md-9 search-col">
@@ -31,4 +30,4 @@
 	</div>
 </div> -->
 
-            <!--ket thuc menu</!-->
+<!--ket thuc menu</!-->

@@ -3242,7 +3242,8 @@ body{
 	.bor-facebook{
 		margin: 5px 0px 5px 0px;
 		border-radius: 3px;
-		width:50%;
+		width:100%;
+		padding: 2px 5px;
 		height: 40px;
 		border: 1px solid #d7d7d7;
 		margin-right: 5px;
@@ -3256,7 +3257,8 @@ body{
 	.bor-google{
 		margin: 5px 0px 5px 0px;
 		border-radius: 3px;
-		width:50%;
+		width:100%;
+		padding: 2px 5px;
 		height: 40px;
 		border: 1px solid #d7d7d7;
 		margin-right: 5px;
