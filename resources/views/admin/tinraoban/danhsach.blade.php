@@ -16,21 +16,29 @@
                 <thead>
                     <tr align="center">
                         <th>STT</th>
-                        <th>Hình Thức</th></th>
-                        <th>Loại bất động sản</th></th>
-                        <th>Tên bất động sản</th></th>
-                        <th>Địa chỉ</th></th>
-                        <th>Tên Dự Án</th></th>
-                        <th>Loại tin rao</th></th>
-                        <th>Ngày đăng</th></th>
-                        <th>Người đăng</th></th>
-                        <th>Trạng thái</th></th>
-                        <th>Delete</th>
-                        <th>Edit</th>
+                        <th>Hình Thức</th>
+                        </th>
+                        <th>Loại bất động sản</th>
+                        </th>
+                        <th>Tên bất động sản</th>
+                        </th>
+                        <th>Địa chỉ</th>
+                        </th>
+                        <th>Tên Dự Án</th>
+                        </th>
+                        <th>Loại tin rao</th>
+                        </th>
+                        <th>Ngày đăng</th>
+                        </th>
+                        <th>Người đăng</th>
+                        </th>
+                        <th>Trạng thái</th>
+                        </th>
+                        <th>action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i=1;
+                    <?php $i = 1;
                     ?>
                     @foreach($tinrao as $tr)
                     <tr class="odd gradeX" align="center">
@@ -39,17 +47,32 @@
                         <td>{{$tr->loaibds->d_tendanhmuc}}</td>
                         <td>{{$tr->b_tieude}}</td>
                         <td>{{$tr->b_diachi}}</td>
+                        @if($tr->b_idduan != '')
                         <td>{{$tr->duan->d_tenduan}}</td>
+                        @else
+                        <td> <span class='label label-success'>không thuộc dự án nào </span></td>
+                        @endif
                         <td>{{$tr->loaitinrao->l_tenloaitin}}</td>
                         <td>{{formatDateVN($tr->created_at)}}</td>
                         <td>{{$tr->khachhang->name}}</td>
-                        <td>@if($tr->b_hoatdong==0){{"private"}}
-                        @else {{"public"}}
-                        @endif</td>
-                        <td class="center"><button type="button" class="btn btn-danger"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tinraoban/xoa/{{$tr->id}}"  style="color:black"> Delete</a></button></td>
-                    <td class="center"><button type="button" class="btn btn-info"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tinraoban/sua/{{$tr->id}}" style="color:black">Edit</a></button></td>
-                    </tr> 
-                    @endforeach     
+                        <td>@if($tr->b_hoatdong==0)
+                            <span class='label label-success'>private</span>
+                            @else
+                            <span class='label label-primary'>public</span>
+                            @endif</td>
+                        <td class="center">
+                            <div class="d-flex">
+                                @can('delete')
+                                <button type="button" class="btn btn-danger mr-1"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tinraoban/xoa/{{$tr->id}}" style="color:black"> Delete</a>
+                                </button>
+                                @endcan
+                                @can('edit')
+                                <button type="button" class="btn btn-info"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tinraoban/sua/{{$tr->id}}" style="color:black">Edit</a></button>
+                                @endcan
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

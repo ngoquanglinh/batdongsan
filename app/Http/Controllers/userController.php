@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
+use App\canmuacanthue;
+use App\batdongsan;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class userController extends Controller
 {
@@ -75,6 +79,7 @@ class userController extends Controller
 		$user->u_lienhe = $request->lienhe;
 		$user->u_didong = $request->didong;
 		$user->save();
+		$user->assignRole(['khach']);
 		return redirect('admin/user/danhsach')->withInput()->with('thongbao', 'Thêm thành công');
 	}
 	public function getSua($id)
@@ -95,7 +100,6 @@ class userController extends Controller
 		);
 		$user = User::find($id);
 		$user->name = $request->name;
-		$user->u_quyen = $request->quyen;
 		if ($request->changePassword == "on") {
 			$this->validate(
 				$request,
@@ -114,7 +118,7 @@ class userController extends Controller
 			$user->password = bcrypt($request->password);
 		}
 		$user->save();
-		return redirect('admin/user/sua/' . $id)->withInput()->with('thongbao', 'Sửa thành công');
+		return redirect('admin/user/danhsach')->withInput()->with('thongbao', 'Sửa thành công');
 	}
 	public function getXoa($id)
 	{
@@ -129,8 +133,8 @@ class userController extends Controller
 	}
 	public function postDangKy(request $request)
 	{
-		$this->validate(
-			$request,
+		$validator = Validator::make(
+			$request->all(),
 			[
 				'name' => 'required',
 				'email' => 'required|email|unique:users,email',
@@ -151,6 +155,9 @@ class userController extends Controller
 				'againpassword.same' => 'password nhập lại chưa chính xác',
 			]
 		);
+		if ($validator->fails()) {
+			return response()->json(['error' => $validator->errors()->all()], 404);
+		}
 		$user = new User;
 		$user->name = $request->name;
 		$user->email = $request->email;
@@ -163,11 +170,14 @@ class userController extends Controller
 		$user->u_idward = $request->ward;
 		$user->u_gioitinh = $request->sex;
 		$user->save();
-		echo "<script>alert('Đăng ký thành công'); history.back();</script>";
+		$user->assignRole(['khach']);
+		return response()->json([
+			"success" => "đăng ký thành công"
+		], 200);
 	}
 	public function postKhachHangLogin(request $request)
 	{
-		$this->validate($request, [
+		$validator = validator::make($request->all(), [
 			'email' => 'required|email',
 			'password' => 'required',
 		], [
@@ -175,10 +185,11 @@ class userController extends Controller
 			'email.email' => 'Email không đúng định dạng',
 			'password.required' => 'Bạn chưa nhập password',
 		]);
+		if ($validator->fails()) {
+			return response()->json(['error' => $validator->errors()->all()], 404);
+		}
 		if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-			return redirect('trang-ca-nhan');
-		} else {
-			echo "<script>alert('Đăng nhập không thành công'); history.back();</script>";
+			return response()->json(["success" => "đang nhập thành công"]);
 		}
 	}
 	public  function postKhachHangLogout()
@@ -186,8 +197,116 @@ class userController extends Controller
 		Auth::logout();
 		return redirect()->back();
 	}
-	public function getTrangCaNhan()
+	public function getTrangCaNhan($id)
 	{
-		return view('layouts.trangcanhan');
+		$user = User::find($id);
+		return view('layouts.trangcanhan', compact('user'));
+	}
+	public function getSuaProfile($id)
+	{
+		$user = User::find($id);
+		return view('layouts.profile.profile', compact('user'));
+	}
+	public function postSuaProfile(request $request, $id)
+	{
+		$this->validate(
+			$request,
+			[
+				'name' => 'required',
+				'u_didong' => 'required',
+				'u_ngaysinh' => 'required'
+			],
+			[
+				'name.required' => 'Bạn chưa nhập tên',
+				'u_didong.required' => 'Bạn chưa nhập số điện thoại',
+				'u_ngaysinh.required' => 'Bạn chưa nhập ngày sinh',
+			]
+		);
+		$user = User::find($id);
+		$user->name = $request->name;
+		$user->u_didong = $request->u_didong;
+		$user->u_ngaysinh = $request->u_ngaysinh;
+		$user->save();
+		return redirect()->back()->with('message', 'Sửa thành công');
+	}
+	public function uploadProfile(Request $request, $id)
+	{
+		$user = User::find($id);
+		if ($request->hasFile('avatar')) {
+			$file = $request->file('avatar');
+			$name = $file->getClientOriginalName();
+			$hinh = Str::random(4) . "_" . $name;
+			$file->move("assets/uploads/images", $hinh);
+			if ($user->u_anh != '') {
+				unlink("assets/uploads/images/" . $user->u_anh);
+			}
+			$user->u_anh = $hinh;
+		}
+		$user->save();
+		return response()->json([
+			"success" => $user->u_anh
+		]);
+	}
+	public function getPassword($id)
+	{
+		$user = User::find($id);
+		return view('layouts.profile.password', compact('user'));
+	}
+	public function postPassword(Request $request, $id)
+	{
+		$this->validate(
+			$request,
+			[
+				'password' => 'required|min:6',
+				'passwordAgain' => 'required|same:password'
+			],
+			[
+				'password.required' => 'Bạn chưa password',
+				'password.min' => 'password có ít nhất 6 ký tự',
+				'passwordAgain.required' => 'Bạn chưa nhập lại password',
+				'passwordAgain.same' => 'password nhập lại không khớp'
+			]
+		);
+		$user = User::find($id);
+		$user->password = bcrypt($request->password);
+		$user->save();
+		return redirect()->back()->with('message', 'Sửa thành công');
+	}
+	public function getDanhSachTinBan($id)
+	{
+		$user = User::find($id);
+		$tinrao = batdongsan::where('b_idnguoidang', $id)->where('b_hoatdong', 1)->orderBy('created_at')->paginate(5);
+		return view('layouts.profile.danhsachtinraoban', compact('user', 'tinrao'));
+	}
+	public function getDanhSachTinBanMua($id)
+	{
+		$user = User::find($id);
+		return view('layouts.profile.danhsachtinraomua', compact('user'));
+	}
+	public function postDeleteTinBan($userId, $id)
+	{
+		$tinrao = batdongsan::find($id);
+		if ($tinrao->b_idnguoidang == $userId) {
+			$tinrao->delete();
+		}
+		return response()->json([
+			"success" => "xóa tin thành công"
+		]);
+	}
+	public function getDanhSachTinMua($id)
+	{
+		$user = User::find($id);
+		$tinrao = canmuacanthue::where('c_idnguoidang', $id)->where('c_hoatdong', 1)->orderBy('created_at')->paginate(5);
+		return view('layouts.profile.danhsachtinraomua', compact('user', 'tinrao'));
+	}
+	public function postDeleteTinMua($userId, $id)
+	{
+		$tinrao = canmuacanthue::find($id);
+		if ($tinrao->c_idnguoidang == $userId) {
+			$tinrao->delete();
+		}
+		return response()->json([
+			"success" => "xóa tin thành công"
+		]);
 	}
 }

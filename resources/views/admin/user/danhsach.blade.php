@@ -19,16 +19,16 @@
                         <th>email</th>
                         <th>Liên Hệ</th>
                         <th>Di Động</th>
-                        <th>Quyền</th>
                         <th>Ngày Tạo</th>
-                        <th>Delete</th>
-                        <th>Edit</th>
+                        <th>Vai trò</th>
+                        <th>Quyền</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-                $i=1
-                ?>
+                    <?php
+                    $i = 1
+                    ?>
                     @foreach($user as $us)
                     <tr class="odd gradeX" align="center">
                         <td>{{$i++}}</td>
@@ -36,20 +36,28 @@
                         <td>{{$us->email}}</td>
                         <td>{{$us->u_lienhe}}</td>
                         <td>{{$us->u_didong}}</td>
-                        <td>
-                            @if($us->u_quyen==3)
-                                {{"người dùng"}}
-                            @elseif($us->u_quyen==2)
-                                {{"admin"}}
-                            @else
-                                {{"superAdmin"}}
-                            @endif
-                        </td>
                         <td>{{formatDateVn($us->created_at)}}</td>
-                        <td class="center"><button type="button" class="btn btn-danger"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/user/xoa/{{$us->id}}" style="color:black">Delete</a></button></td>
-                        <td class="center"><button type="button" class="btn btn-info"><i class="fa fa-pencil fa-fw"></i> <a href="admin/user/sua/{{$us->id}}" style="color:black">Edit</a></button></td>
+                        <th>
+                            <p>
+                                @foreach($us->roles->pluck('name') as $role)
+                                {{$role}}
+                                @endforeach
+
+                            </p>
+                        </th>
+                        <th>
+                            @foreach($us->getAllPermissions() as $pe)
+                            {{$pe->name}},
+                            @endforeach
+                        </th>
+                        <td class="center">
+                            <div class="d-flex">
+                                <button class="btn btn-danger mr-1"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/user/xoa/{{$us->id}}" style="color:black">Delete</a></button>
+                                <button class="btn btn-info"><i class="fa fa-pencil fa-fw"></i> <a href="admin/user/sua/{{$us->id}}" style="color:black">Edit</a></button>
+                            </div>
+                        </td>
                     </tr>
-                @endforeach
+                    @endforeach
                 </tbody>
             </table>
         </div>

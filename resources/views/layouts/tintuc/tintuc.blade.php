@@ -2,6 +2,14 @@
 @section('tittle','Tin tức bất động sản | Chuyên trang về Tin tức bất động sản – bất động sản')
 @section('content')
 <div class="content">
+    <div class="row flex-column position-relative">
+        <div class="d-flex newletter-content mb-2 w-50">
+            <input type="text" id="searchInput" class="w-75" placeholder="nhập tên tin tức..." style="outline: none !important">
+            <button class="w-25">search</button>
+        </div>
+        <div id="resultSearch" class="w-50 position-absolute" style="top:100%; z-index:1000">
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-6">
             <div class="row ">
@@ -14,67 +22,44 @@
             <div class="row left-news-page">
                 <div class="col-md-6">
                     <div class="left-news-img">
-                        <img src="uploads/images/20191104164300-4194.jpg" alt="">
+                        <img src="assets/uploads/images/{{$tinnoibat1->t_hinhanh}}" alt="">
                     </div>
                     <div class="left-news-title">
-                        <h3><a href="">
-                                Bình Định phê duyệt quy hoạch khu vực phía nam đầm Đề Gi hơn 4.600ha
+                        <h3><a href="{{ route('tintuc.chitiet',['slug'=> $tinnoibat1->t_slug]) }}">
+                                {{$tinnoibat1->t_tentintuc}}
                             </a></h3>
                     </div>
-                    <div class="">
-                        <p>UBND tỉnh Bình Định vừa phê duyệt đồ án quy hoạch chung tỷ lệ 1/5.000 khu vực phía nam đầm Đề Gi, huyện Phù Cát đến năm 2035.</p>
+                    <div class="splice_mota">
+                        <p>{{$tinnoibat1->t_motangan}}</p>
                     </div>
                 </div>
                 <div class="col-md-6 pl-2 pr-2">
                     <div class="row left-news-img1">
                         <ul>
+                            @foreach($tinnoibat2 as $tnb2)
                             <li>
                                 <div class="d-flex">
                                     <div>
-                                        <a href=""><img src="uploads/images/20191104145643-d8c6.jpg" alt=""></a>
+                                        <a href="{{ route('tintuc.chitiet',['slug'=> $tnb2->t_slug]) }}"><img src="assets/uploads/images/{{$tnb2->t_hinhanh}}" alt=""></a>
                                     </div>
-                                    <div class="left-news-link1">
-                                        <a href="">Đà Nẵng ban hành giá đất tái định cư một số tuyến đường ở quận Sơn Trà</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex">
-                                    <div>
-                                        <a href=""><img src="uploads/images/20191104145643-d8c6.jpg" alt=""></a>
-                                    </div>
-                                    <div class="left-news-link1">
-                                        <a href="">Đà Nẵng ban hành giá đất tái định cư một số tuyến đường ở quận Sơn Trà</a>
+                                    <div class="left-news-link1 ">
+                                        <a href="{{ route('tintuc.chitiet',['slug'=> $tnb2->t_slug]) }}">{{$tnb2->t_tentintuc}}</a>
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="d-flex">
-                                    <div>
-                                        <a href=""><img src="uploads/images/20191104145643-d8c6.jpg" alt=""></a>
-                                    </div>
-                                    <div class="left-news-link1">
-                                        <a href="">Đà Nẵng ban hành giá đất tái định cư một số tuyến đường ở quận Sơn Trà</a>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- end-row -->
                     <div class="row parent-cate-news p-3">
                         <ul>
-                            <li><a href="">
-                                    Giá đất Bình Dương dự kiến điều chỉnh tăng gấp đôi sau 2020
-                                </a></li>
-                            <li><a href="">
-                                    Giá đất Bình Dương dự kiến điều chỉnh tăng gấp đôi sau 2020
-                                </a></li>
-                            <li><a href="">
-                                    Giá đất Bình Dương dự kiến điều chỉnh tăng gấp đôi sau 2020
-                                </a></li>
-                            <li><a href="">
-                                    Giá đất Bình Dương dự kiến điều chỉnh tăng gấp đôi sau 2020
-                                </a></li>
+                            @foreach($tinnoibat3 as $tnb3)
+                            <li>
+                                <a href="{{ route('tintuc.chitiet',['slug'=> $tnb3->t_slug]) }}">
+                                    {{$tnb3->t_tentintuc}}}
+                                </a>
+                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -503,90 +488,22 @@
                 </div>
                 <div class="news-box-box">
                     <ul>
+                        @foreach($tinxemnhieu as $txn)
                         <li>
                             <a href="">
                                 <div class="d-flex">
                                     <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
+                                        <a href="tin-tuc/{{$txn->t_slug}}"><img src="assets/uploads/images/{{$txn->t_hinhanh}}" alt=""></a>
                                     </div>
-                                    <div>
+                                    <div class="ml-1">
                                         <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
+                                            {{$txn->t_tentintuc}}
                                         </p>
                                     </div>
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <div class="d-flex">
-                                    <div>
-                                        <img src="uploads/images/20191028141128-e9ea.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Quá vội vàng khi mua nhà khiến tôi phải trả giá đắt
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -756,3 +673,47 @@
     </div>
 </div>
 @endsection('content')
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $(".splice_mota").each(function() {
+            var text = $(this).text();
+            var text_sub = text.replace("\\s{2,}", " ").trim();
+            if (text_sub.length > 100) {
+                text_sub = text_sub.substring(0, 400);
+            }
+            $(this).text(text_sub);
+            $(this).append("...");
+        });
+        $('#searchInput').keyup(function() {
+            $value = $(this).val();
+            if ($value.length > 0) {
+                $.ajax({
+                    type: 'get',
+                    url: 'tin-tuc/search',
+                    data: {
+                        'search': $value
+                    },
+                    success: function(data) {
+                        if (data.success) {
+                            var html = "<div class='list-group w-100'>";
+                            data.success.map((item) => {
+                                html += `<a href = "tin-tuc/${item.t_slug}" style="text-decoration: none;cursor: pointer;"><button type = "button" class = "list-group-item w-100" style = "outline: none !important;cursor: pointer;" >${item.t_tentintuc}</button></a>`;
+                            });
+                            html += "</div>";
+                            $("#resultSearch").html(html);
+                        }
+                    }
+                });
+            } else {
+                $("#resultSearch").html('');
+            }
+        })
+        $.ajaxSetup({
+            headers: {
+                'csrftoken': '{{ csrf_token() }}'
+            }
+        });
+    })
+</script>
+@endsection

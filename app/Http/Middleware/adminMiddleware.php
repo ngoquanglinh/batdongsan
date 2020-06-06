@@ -20,6 +20,6 @@ class adminMiddleware
                 return $next($request);
         else
             echo"<script> alert('Bạn không có quyền vào đây'); history.back();</script>";
-           
+        
     }
 }

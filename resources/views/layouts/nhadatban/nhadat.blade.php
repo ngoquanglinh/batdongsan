@@ -7,6 +7,14 @@
             <div class="title">
                 <h1>Nhà đất bán tại Việt Nam</h1>
             </div>
+            <div class="row flex-column position-relative">
+                <div class="d-flex newletter-content mb-2 w-50">
+                    <input type="text" id="searchInputBds" class="w-75" placeholder="nhập tên nhà đất bán..." style="outline: none !important">
+                    <button class="w-25">search</button>
+                </div>
+                <div id="resultSearchBds" class="w-50 position-absolute" style="top:100%; z-index:1000">
+                </div>
+            </div>
             <div>
                 <p>Có <strong>239,503 </strong>bất động sản.</p>
             </div>
@@ -43,30 +51,47 @@
                         <div class="row">
                             <div class="product-page-list">
                                 <ul>
-                                    <li>
+                                    @foreach($nhadatban as $ndb)
+                                    <li class=" @if($ndb->b_idloaitinrao ===1 )
+                                        {{""}}
+                                        @elseif($ndb->b_idloaitinrao ===2 )
+                                        {{"bor-vip1"}}
+                                        @elseif($ndb->b_idloaitinrao ===3 )
+                                        {{"bor-vip2"}}
+                                        @endif
+                                        ">
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="nha-dat-ban/{{$ndb->b_slug}}">
+                                                <h3>{{$ndb->b_tieude}}</h3>
+                                            </a>
                                         </div>
-                                        <div class="p-main d-flex">
+                                        <div class="p-main d-flex ">
                                             <div class="product-avatar-img">
-                                                <a href=""> <img src="uploads/images/20191026120729-96f5_wm.png" alt=""></a>
+                                                <a href="nha-dat-ban/{{$ndb->b_slug}}">
+                                                    @foreach( $ndb->anhbds as $a)
+                                                    @if($loop->first)
+                                                    <img src="assets/uploads/images/{{$a->a_anh}}" alt="">
+                                                    @endif
+                                                    @endforeach
+                                                </a>
                                             </div>
                                             <div class="p-main-right">
-                                                <div class="p-main-text">
-                                                    <p>Hotline: 0942.90.5151 1. Tổng quan dự án. - Tên dự án: Chung cư cao cấp Stellar Garden. - Chủ đầu tư: Công ty CP kinh doanh và xây dựng Quang Minh. - Vị trí đắc địa: Sở hữu 2 mặt đường đắt giá: Lê Văn Thiêm và Ngụy Như Kon Tum tại trung tâm quận Thanh Xuân, trường mầm non ngay l...</p>
+                                                <div class="p-main-text splice_mota">
+                                                    <p>{{$ndb->b_mota}}</p>
                                                 </div>
-                                                <div class="p-main-text-bottom d-flex">
+                                                <div class="p-main-text-bottom d-flex justify-content-between">
                                                     <div class="swap">
-                                                        <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
+                                                        <span>Giá: <strong>{{$ndb->b_gia}} {{$ndb->donvibds->d_tendonvi}}</strong> Diện tích: <strong>{{$ndb->b_dientich}} m2</strong> </strong>Quận/Huyện: <strong> {{$ndb->huyen->name}}, {{$ndb->tinh->name}}</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        {{$ndb->b_ngaydang}}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="bor-vip1">
+                                    @endforeach
+                                    <!-- <li class="bor-vip1">
                                         <div class="p-title-vip1">
                                             <a href=""><h3> 360° CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
                                         </div>
@@ -272,7 +297,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -298,7 +323,9 @@
                                 <ul>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>SIÊU HOT - BÁN ĐẤT TRUNG TÂM THƯƠNG MẠI TẠI THÀNH PHỐ BẠC LIÊU. GIÁ CHỈ 17TR/M2 - HL: 0886665577</h3></a>
+                                            <a href="">
+                                                <h3>SIÊU HOT - BÁN ĐẤT TRUNG TÂM THƯƠNG MẠI TẠI THÀNH PHỐ BẠC LIÊU. GIÁ CHỈ 17TR/M2 - HL: 0886665577</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -313,15 +340,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -336,15 +365,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -359,15 +390,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -382,15 +415,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -405,15 +440,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -428,15 +465,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -451,15 +490,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -474,15 +515,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -497,15 +540,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -520,8 +565,8 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -551,7 +596,9 @@
                                 <ul>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -566,15 +613,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -589,15 +638,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -612,15 +663,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -635,15 +688,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -658,15 +713,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -681,15 +738,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -704,15 +763,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -727,15 +788,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -750,15 +813,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -773,8 +838,8 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -804,7 +869,9 @@
                                 <ul>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3> RA HÀNG PENHOUSE SUNSHINE RIVERSIDE, 51 TR/M2, 10% KÝ HĐMB, VIEW ĐỈNH CAO SÔNG HỒNG, CẦU NHẬT TÂN</h3></a>
+                                            <a href="">
+                                                <h3> RA HÀNG PENHOUSE SUNSHINE RIVERSIDE, 51 TR/M2, 10% KÝ HĐMB, VIEW ĐỈNH CAO SÔNG HỒNG, CẦU NHẬT TÂN</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -819,15 +886,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -842,15 +911,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -865,15 +936,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -888,15 +961,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -911,15 +986,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -934,15 +1011,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -957,15 +1036,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -980,15 +1061,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -1003,15 +1086,17 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="p-title">
-                                            <a href=""><h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3></a>
+                                            <a href="">
+                                                <h3>CHUNG CƯ CAO CẤP STELLAR GARDEN CHỈ TỪ 3.3 TỶ CĂN GÓC 3 NGỦ SIÊU ĐẸP, CK 1 TỶ, HT VAY 70% LS 0%</h3>
+                                            </a>
                                         </div>
                                         <div class="p-main d-flex">
                                             <div class="product-avatar-img">
@@ -1026,8 +1111,8 @@
                                                         <span>Giá: <strong>29.5 triệu/m²</strong> Diện tích: <strong>111.8 m² </strong>Quận/Huyện: <strong>Thanh Xuân, Hà Nội</strong></span>
                                                     </div>
                                                     <span class="uptime">
-                                                         23/10/2019
-                                                     </span>
+                                                        23/10/2019
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1312,4 +1397,48 @@
 </div>
 @endsection('content')
 <!--ket thuc noi dung</!-->
-    
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $(".splice_mota").each(function() {
+            var text = $(this).text();
+            var text_sub = text.replace("\\s{2,}", " ").trim();
+            if (text_sub.length > 100) {
+                text_sub = text_sub.substring(0, 400);
+            }
+            $(this).text(text_sub);
+            $(this).append("...");
+        });
+        $('#searchInputBds').keyup(function() {
+            $value = $(this).val();
+            if ($value.length > 0) {
+                $.ajax({
+                    type: 'get',
+                    url: 'nha-dat-ban/search',
+                    data: {
+                        'search': $value
+                    },
+                    success: function(data) {
+                        if (data.success) {
+                            var html = "<div class='list-group w-100'>";
+                            data.success.map((item) => {
+                                html += `<a href = "nha-dat-ban/${item.b_slug}" style="text-decoration: none;cursor: pointer;"><button type = "button" class = "list-group-item w-100" style = "outline: none !important;cursor: pointer;" >${item.b_tieude}</button></a>`;
+                            });
+                            html += "</div>";
+                            $("#resultSearchBds").html(html);
+                        }
+                    }
+                });
+            } else {
+                $("#resultSearchBds").html('');
+            }
+        })
+        $.ajaxSetup({
+            headers: {
+                'csrftoken': '{{ csrf_token() }}'
+            }
+        });
+    })
+</script>
+
+@endsection

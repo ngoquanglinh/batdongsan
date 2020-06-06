@@ -28,16 +28,16 @@
                         <label>Nhập Lại Password</label>
                         <input type="password" class="form-control  password" name="password_again" placeholder="Nhập lại mật khẩu" disabled="" />
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label>quyền</label>
                         <select name="quyen" id="" class="form-control">
                             <option value="3">người dùng</option>
                             <option value="2">admin</option>
                             <option value="1">super admin</option>
                         </select>
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-default">Sửa</button>
-                    <button type="reset" class="btn btn-default">Làm Mới</button>
+                    <button class="btn btn-default">Làm Mới</button>
                 <form>
             </div>
         </div>

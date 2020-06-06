@@ -1,134 +1,60 @@
-@extends('layouts.master') 
-@section('tittle','Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam') 
+@extends('layouts.master')
+@section('tittle','Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam')
 @section('content')
 <!--ket thuc menu</!-->
 <div class="content">
     <div class="row prd-buy">
         <div class="col-md-9 prd-buy-left">
             <h1 class="prd-buy-title"> Nhà đất Cần mua - Cần thuê tại Việt Nam
-			</h1>
+            </h1>
             <div class="prd-buy-about">
                 Có <strong class="greencolor">1,144</strong>bất động sản.
             </div>
             <div class="row">
                 <div class="prd-buy-header">
                     <h2>
-					Nhà đất Cần mua - Cần thuê tại Việt Nam
-					</h2>
+                        Nhà đất Cần mua - Cần thuê tại Việt Nam
+                    </h2>
                 </div>
             </div>
             <!-- end-row -->
             <div class="row prd-buy-list">
-                <div class="vip0">
+                <div class="vip0" style="width:100%">
                     <ul>
+                        @foreach($canmuacanthue as $cmct)
                         <li>
                             <div class="vip0-title">
-                                <a href="">Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà</a>
+                                <a href="can-mua-can-thue/{{$cmct->c_slug}}">
+                                    <h3>{{$cmct->c_tieude}}</h3>
+                                </a>
                             </div>
                             <div class="d-flex">
                                 <div>
-                                    <img src="uploads/images/20191018145953-d52a_wm.jpg" alt="">
+                                    <a href="can-mua-can-thue/{{$cmct->c_slug}}">
+                                        @foreach($cmct->anhcanmuacanthue as $a)
+                                        @if($loop->first)
+                                        <img src="http://localhost:8000/assets/uploads/images/{{$a->a_ten}}" alt="">
+                                        @endif
+                                        @endforeach
+                                    </a>
+
                                 </div>
-                                <div class="vip0-main">
-                                    <div>
-                                        <p>Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà.Thuê nhà 03 phòng ngủ, 02 vệ sinh, ban công hướng Tây Nam, Tây, Tây Bắc, giá từ 12 - 16 triệu (nội thất cơ bản hoặc full nội thất, ưu tiên nội thất cơ bản). Vị trí dọc đường Thái Hà (ưu tiên tòa nhà A, chung cư Sông Hồng 165 Thái Hà), Hu...</p>
+                                <div class="vip0-main w-100">
+                                    <div class="splice_mota">
+                                        <p>{{$cmct->c_mota}}</p>
                                     </div>
-                                    <div>
-                                        Giá: <span>12 triệu - 16 triệu/tháng</span> Diện tích: <span>Không xác định</span>
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class=" ">
+                                            Giá: <span>{{$cmct->gia->g_ten}}</span> Diện tích: <span>{{$cmct->dientich->d_ten}}</span>
+                                            Quận/Huyện: <span>{{$cmct->huyen->name}}</span> Tỉnh/TP: <span>{{$cmct->tinh->name}}</span>
+                                        </div>
                                         <div class="vip0-date">
-                                            23/10/2019
+                                            {{$cmct->c_ngaydang}}
                                         </div>
                                     </div>
-                                    <div>
-                                        Quận/Huyện: <span>Đống Đa</span> Tỉnh/TP: <span>Hà Nội</span>
-                                    </div>
                                 </div>
-                            </div>
                         </li>
-                    </ul>
-                </div>
-                <div class="vip1">
-                    <ul>
-                        <li>
-                            <div class="vip1-title">
-                                <a href="">Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà</a>
-                            </div>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="uploads/images/20191018145953-d52a_wm.jpg" alt="">
-                                </div>
-                                <div class="vip0-main">
-                                    <div>
-                                        <p>Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà.Thuê nhà 03 phòng ngủ, 02 vệ sinh, ban công hướng Tây Nam, Tây, Tây Bắc, giá từ 12 - 16 triệu (nội thất cơ bản hoặc full nội thất, ưu tiên nội thất cơ bản). Vị trí dọc đường Thái Hà (ưu tiên tòa nhà A, chung cư Sông Hồng 165 Thái Hà), Hu...</p>
-                                    </div>
-                                    <div>
-                                        Giá: <span>12 triệu - 16 triệu/tháng</span> Diện tích: <span>Không xác định</span>
-                                        <div class="vip0-date">
-                                            23/10/2019
-                                        </div>
-                                    </div>
-                                    <div>
-                                        Quận/Huyện: <span>Đống Đa</span> Tỉnh/TP: <span>Hà Nội</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="vip2">
-                    <ul>
-                        <li>
-                            <div class="vip2-title">
-                                <a href="">Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà</a>
-                            </div>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="uploads/images/20191018145953-d52a_wm.jpg" alt="">
-                                </div>
-                                <div class="vip0-main">
-                                    <div>
-                                        <p>Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà.Thuê nhà 03 phòng ngủ, 02 vệ sinh, ban công hướng Tây Nam, Tây, Tây Bắc, giá từ 12 - 16 triệu (nội thất cơ bản hoặc full nội thất, ưu tiên nội thất cơ bản). Vị trí dọc đường Thái Hà (ưu tiên tòa nhà A, chung cư Sông Hồng 165 Thái Hà), Hu...</p>
-                                    </div>
-                                    <div>
-                                        Giá: <span>12 triệu - 16 triệu/tháng</span> Diện tích: <span>Không xác định</span>
-                                        <div class="vip0-date">
-                                            23/10/2019
-                                        </div>
-                                    </div>
-                                    <div>
-                                        Quận/Huyện: <span>Đống Đa</span> Tỉnh/TP: <span>Hà Nội</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="vip3">
-                    <ul>
-                        <li>
-                            <div class="vip3-title">
-                                <a href="">Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà</a>
-                            </div>
-                            <div class="d-flex">
-                                <div>
-                                    <img src="uploads/images/20191018145953-d52a_wm.jpg" alt="">
-                                </div>
-                                <div class="vip0-main">
-                                    <div>
-                                        <p>Cần thuê gấp căn hộ khu vực Nguyễn Chí Thanh, Láng Hạ, Thái Hà.Thuê nhà 03 phòng ngủ, 02 vệ sinh, ban công hướng Tây Nam, Tây, Tây Bắc, giá từ 12 - 16 triệu (nội thất cơ bản hoặc full nội thất, ưu tiên nội thất cơ bản). Vị trí dọc đường Thái Hà (ưu tiên tòa nhà A, chung cư Sông Hồng 165 Thái Hà), Hu...</p>
-                                    </div>
-                                    <div>
-                                        Giá: <span>12 triệu - 16 triệu/tháng</span> Diện tích: <span>Không xác định</span>
-                                        <div class="vip0-date">
-                                            23/10/2019
-                                        </div>
-                                    </div>
-                                    <div>
-                                        Quận/Huyện: <span>Đống Đa</span> Tỉnh/TP: <span>Hà Nội</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -250,3 +176,19 @@
 </div>
 <!--ket thuc noi dung</!-->
 @endsection('content')
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $(".splice_mota").each(function() {
+            var text = $(this).text();
+            var text_sub = text.replace("\\s{2,}", " ").trim();
+            if (text_sub.length > 100) {
+                text_sub = text_sub.substring(0, 400);
+            }
+            $(this).text(text_sub);
+            $(this).append("...");
+        })
+    })
+</script>
+
+@endsection

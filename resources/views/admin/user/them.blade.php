@@ -11,7 +11,7 @@
             </div>
             <!-- /.col-lg-12 -->
             <div class="col-lg-7" style="padding-bottom:120px">
-            @include('admin.layouts.error');
+                @include('admin.layouts.error');
                 <form action="admin/user/them" method="POST">
                     @csrf
                     <div class="form-group">
@@ -38,17 +38,17 @@
                         <label>di động</label>
                         <input type="text" class="form-control" name="didong" placeholder="di động" />
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label>quyền</label>
                         <select name="quyen" id="" class="form-control">
                             <option value="3">người dùng</option>
                             <option value="2">admin</option>
                             <option value="1">super admin</option>
                         </select>
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-default">Thêm</button>
                     <button type="reset" class="btn btn-default">Làm Mới</button>
-                <form>
+                    <form>
             </div>
         </div>
         <!-- /.row -->

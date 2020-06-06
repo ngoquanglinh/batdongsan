@@ -28,6 +28,8 @@ $config = array();
 $config['authentication'] = function () {
     return true;
 };
+// $config['authentication'] = '\App\Http\Middleware\ckFinder';
+
 
 /*============================ License Key ============================================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_licenseKey
@@ -66,8 +68,8 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => 'http://localhost/batdongsan/public/assets/uploads/images/',
-//  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
+    'baseUrl'      => 'http://localhost:8000/assets/uploads/images/',
+    //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
     'filesystemEncoding' => 'UTF-8',

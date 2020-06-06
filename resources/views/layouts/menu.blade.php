@@ -1,5 +1,5 @@
 <div class="navs">
-	<a href="trang-chu"><img src="uploads/logo/homea.png" alt="" style="width:44px;float:left;height: 29px; margin-left:3px"></a>
+	<a href="/"><img src="uploads/logo/homea.png" alt="" style="width:44px;float:left;height: 29px; margin-left:3px"></a>
 	<?php
 	recursiveMenu($danhmuc, 0, $newMenu, $Class);
 	echo str_replace("<ul class='sub-menu'></ul>", '', $newMenu);

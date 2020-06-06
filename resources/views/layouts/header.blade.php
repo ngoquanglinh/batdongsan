@@ -41,34 +41,35 @@
                                     @include('layouts.message')
                                     <!-- Modal body -->
                                     <div class="modal-body form-dangky">
-                                        <form action="khach-hang/dang-ky" method="POST">
+                                        <form method="POST" id="formDangky">
+                                            <div id="errorSingin"></div>
                                             @csrf
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Tên đăng nhập" name="name">
+                                                <input type="text" class="form-control" placeholder="Tên đăng nhập" name="name" id="nameSingin">
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Địa chỉ email" name="email">
+                                                <input type="email" class="form-control" placeholder="Địa chỉ email" name="email" id="emailSingin">
                                             </div>
                                             <div class="form-group">
                                                 <div class="d-flex input-pass">
-                                                    <div class="mr-2"><input type="password" class="form-control" placeholder="Mật khẩu" name="password"></div>
-                                                    <div class="ml-2"><input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="againpassword"></div>
+                                                    <div class="mr-2"><input type="password" class="form-control" placeholder="Mật khẩu" name="password" id="passwordSingin"></div>
+                                                    <div class="ml-2"><input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="passwordAgainSingin" name="againpassword"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Tên đầy đủ" name="fullname">
+                                                <input type="text" class="form-control" placeholder="Tên đầy đủ" name="fullname" id="fullNameSingin">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Ngày sinh" name="birthday">
+                                                <input type="text" class="form-control" placeholder="Ngày sinh" name="birthday" id="birthdaySingin">
                                             </div>
                                             <div class="form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="sex" checked="checked" value="1">Nam
+                                                    <input type="radio" class="form-check-input sexSigin" name="sex" checked="checked" value="1">Nam
                                                 </label>
                                             </div>
                                             <div class="form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="sex" value="0">Nữ
+                                                    <input type="radio" class="form-check-input sexSigin" name="sex" value="0">Nữ
                                                 </label>
                                             </div>
                                             <div class="d-flex option-dangky">
@@ -90,12 +91,12 @@
                                             </div>
                                             <div class="form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="contacttype" checked="checked" value="0">Cá nhân
+                                                    <input type="radio" class="form-check-input sytemSingin" name="contacttype" checked="checked" value="1">Cá nhân
                                                 </label>
                                             </div>
                                             <div class="form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="contacttype" value="1">Công ty
+                                                    <input type="radio" class="form-check-input sytemSingin " name="contacttype" value="2">Công ty
                                                 </label>
                                             </div>
                                             <p>Bằng cách nhấn vào Đăng ký, bạn đồng ý với các Điều khoản thỏa thuận, Quy chế hoạt động, Chính sách bảo mật thông tin, Cơ chế giải quyết khiếu nại,... của Chúng tôi</p>
@@ -110,7 +111,7 @@
                         </button>
                         @if(Auth::check())
                         <img src="uploads/logo/logout.png" alt="">
-                        <a href="trang-ca-nhan"><button class="btn-dang-nhap" type="button" class="btn">{{Auth::user()->name}}</button></a>
+                        <a href="trang-ca-nhan/{{Auth::user()->id}}"><button class="btn-dang-nhap" type="button" class="btn">{{Auth::user()->name}}</button></a>
                         <img src="uploads/logo/logout.png" alt="">
                         <a href="khach-hang/logout"><button class="btn-dang-nhap" type="button" class="btn">Đăng Xuất</button></a>
                         @else
@@ -130,7 +131,8 @@
 
                                     <!-- Modal body -->
                                     <div class="modal-body form-dangnhap">
-                                        <form action="khach-hang/login" method="POST">
+                                        <form id="formLoginSubmit" method="POST">
+                                            <div id="errorLogin"></div>
                                             @csrf
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -138,7 +140,7 @@
                                                         <div><i class="fas fa-user-tie"></i></div>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Email" name="email">
+                                                <input type="text" class="form-control" placeholder="Email" id="emailLogin">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -146,7 +148,7 @@
                                                         <div><i class="fas fa-key"></i></div>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" placeholder="Password" name="password">
+                                                <input type="password" class="form-control" placeholder="Password" id="passwordLogin">
                                             </div>
                                             <button type="submit">Đăng Nhập</button>
                                         </form>
@@ -186,3 +188,106 @@
     </div>
 </div>
 <!--ket thuc header-->
+@section('scripts')
+<script>
+    $("#formDangky").submit(function(e) {
+        e.preventDefault();
+        const name = $("#nameSingin").val();
+        const email = $("#emailSingin").val();
+        const password = $("#passwordSingin").val();
+        const passwordAgain = $("#passwordAgainSingin").val();
+        const birth = $("#birthdaySingin").val();
+        const province = $("#provincedk").val();
+        const district = $("#districtdk").val();
+        const ward = $("#warddk").val();
+        const fullname = $("#fullNameSingin").val();
+        var sex;
+        var system;
+        $('.sexSigin:radio:checked').each(function() {
+            sex = $(this).val();
+        });
+        $('.sytemSingin:radio:checked').each(function() {
+            system = $(this).val();
+        });
+        $('.sytemSingin:radio:checked').each(function() {
+            system = $(this).val();
+        });
+        const data = {
+            name: name,
+            email: email,
+            password: password,
+            againpassword: passwordAgain,
+            birthday: birth,
+            province: province,
+            district: district,
+            ward: ward,
+            fullname: fullname,
+            sex: sex,
+            contacttype: system,
+        }
+        fetch('khach-hang/dang-ky', {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var html = null;
+                if (data.error) {
+                    html = '<div class="alert alert-danger">';
+                    data.error.map((err) => {
+                        html += `<div>${err}</div>`;
+                    })
+                    html += '</div>';
+                } else {
+                    alert(data.success);
+                    $("#myModalDangKy").modal("hide");
+                }
+                $("#errorSingin").html(html);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    });
+
+    $("#formLoginSubmit").submit(function(e) {
+        e.preventDefault();
+        const email = $("#emailLogin").val();
+        const password = $("#passwordLogin").val();
+        const data = {
+            password: password,
+            email: email,
+        }
+        fetch('khach-hang/login', {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var html = null;
+                if (data.error) {
+                    html = '<div class="alert alert-danger">';
+                    data.error.map((err) => {
+                        html += `<div>${err}</div>`;
+                    })
+                    html += '</div>';
+                } else {
+                    alert(data.success);
+                    $("#myModalDangNhap").modal("hide");
+
+                }
+                $("#errorLogin").html(html);
+            })
+            .catch((error) => {
+                alert("tài khoản mật khẩu không chính xác");
+            });
+    });
+</script>
+@endsection

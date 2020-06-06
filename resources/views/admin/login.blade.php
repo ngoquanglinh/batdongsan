@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,42 +33,42 @@
                         <h2 class=" text-center">Đăng Nhập</h2>
                     </div>
                     @include('admin.layouts.error')
+                    @include('admin.layouts.message')
                     <div class="panel-body">
-                    @include('admin.layouts.message');
-                    @if(session('role'))
+                        <!-- @if(session('role'))
                     <div class="alert alert-danger">
                         {{session('role')}}
                     </div>
-                    @endif
-                    <form role="form" action="admin/login" method="POST">
-                        <fieldset> 
-                            @csrf
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Nhập email" name="Email" autofocus value="">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Nhập Password" name="Password" value="">
-                            </div>
-                            <button type="submit" class="btn btn-lg btn btn-info btn-block">Đăng Nhập</button>
-                        </fieldset>
-                    </form>
+                    @endif -->
+                        <form role="form" action="admin/login" method="POST">
+                            <fieldset>
+                                @csrf
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Nhập email" name="Email" autofocus value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Nhập Password" name="Password" value="">
+                                </div>
+                                <button type="submit" class="btn btn-lg btn btn-info btn-block">Đăng Nhập</button>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- jQuery -->
-<script src="admin_asset/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="admin_asset/bower_components/jquery/dist/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="admin_asset/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="admin_asset/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!-- Metis Menu Plugin JavaScript -->
-<script src="admin_asset/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="admin_asset/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="admin_asset/dist/js/sb-admin-2.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="admin_asset/dist/js/sb-admin-2.js"></script>
 
 </body>
 

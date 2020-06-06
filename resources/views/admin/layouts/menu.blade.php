@@ -1,7 +1,6 @@
-
-<div class="navbar-default sidebar" role="navigation">
+<div class="navbar sidebar p-0" role="navigation">
     <div class="sidebar-nav navbar-collapse">
-        <ul class="nav" id="side-menu">
+        <ul class="nav flex-column nav-pills" id="side-menu">
             <li class="sidebar-search">
                 <div class="input-group custom-search-form">
                     <input type="text" class="form-control" placeholder="Search...">
@@ -22,9 +21,11 @@
                     <li>
                         <a href="admin/duan/danhsach">Danh Sách Dự Án</a>
                     </li>
+                    @can('create')
                     <li>
                         <a href="admin/duan/them">Thêm Dự Án</a>
                     </li>
+                    @endcan
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
@@ -46,18 +47,21 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-              <li>
+            <li>
                 <a href="admin/tintuc/danhsach"><i class="fa fa-cube fa-fw"></i>Tin Tức<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="admin/tintuc/danhsach">Danh Sách Tin Tức</a>
                     </li>
+                    @can('create')
                     <li>
                         <a href="admin/tintuc/them">Thêm Tin</a>
                     </li>
+                    @endcan
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
+            @role('admin')
             <li>
                 <a href="admin/user/danhsach"><i class="fa fa-users fa-fw"></i>User<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
@@ -69,7 +73,8 @@
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
-            </li>       
+            </li>
+            @endrole
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

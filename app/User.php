@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','u_quyen','u_lienhe','u_dienthoai','u_hoten', 'provider', 'provider_id'
+        'name', 'email', 'password', 'u_quyen', 'u_lienhe', 'u_dienthoai', 'u_hoten', 'provider', 'provider_id'
     ];
 
     /**
@@ -36,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function huyen()
+    {
+        return $this->belongsTo('App\district', 'u_iddistrict', 'id');
+    }
+    public function tinh()
+    {
+        return $this->belongsTo('App\province', 'u_idprovince', 'id');
+    }
 }
